@@ -1,0 +1,7 @@
+{
+  "name": "ionic surf app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

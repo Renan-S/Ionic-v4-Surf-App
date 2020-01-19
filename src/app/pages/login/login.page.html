@@ -1,0 +1,60 @@
+<ion-content> <!-- Caso queira tirar o swipe é só acrescentar class="swiper-no-swiping" no content-->
+  <div class="container top" [hidden]="keyboard.isVisible">
+    <img src="/assets/image/logo.png">
+
+    <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="page">
+      <ion-segment-button value="login">
+        <ion-label>Login</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="register">
+        <ion-label>Register</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <ion-slides  (ionSlideDidChange)="slideChanged()">
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <span>Login</span>
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="email" placeholder="E-mail"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="password" placeholder="Password"></ion-input>
+        </ion-item>
+        <ion-button class="ion-margin-top" (click)="getLogin()" color="light" expand="block">
+          Enter
+        </ion-button>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <span>Register</span>
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="text" placeholder="Name"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="email" placeholder="E-mail"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="password" placeholder="Password"></ion-input>
+        </ion-item>
+
+        <ion-button class="ion-margin-top" (click)="setRegister()" color="light" expand="block">
+          Register
+        </ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="ocean">
+    <div class="waves" [ngStyle]="{'background-position-x': wavesPosition + 'px'}"></div>
+
+    <div class="container bottom ion-text-center" [hidden]="keyboard.isVisible">
+      <span>This APP was made with the goal to create an Ionic dev ambient and be introduced at the technology</span>
+    </div>
+
+  </div>
+
+</ion-content>
