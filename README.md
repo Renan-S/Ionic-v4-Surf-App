@@ -1,5 +1,5 @@
 # Ionic-Surf-App
-App developed by studing the Ionic 4 framework at: [Igor Remas vídeo](https://www.youtube.com/watch?v=UsJ7zsKx_v0).
+App developed by studing the Ionic 4 framework at: [Igor Remas video](https://www.youtube.com/watch?v=UsJ7zsKx_v0).
 
 ## What did i learn?
 
